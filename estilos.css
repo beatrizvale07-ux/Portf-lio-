@@ -85,3 +85,10 @@ font-family: fantasy;
   max-width: 500px;  /* aumenta o tamanho máximo das imagens */
   height: auto;      /* mantém proporção natural */
 }
+
+.sobre {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
