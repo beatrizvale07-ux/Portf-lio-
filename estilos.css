@@ -1,89 +1,97 @@
 body {
-font-family: cursive;
-   background-color: beige;
-    margin: 0 px;
-    padding: 0 px;
+  font-family: cursive;
+  background-color: beige;
+  margin: 0 px;
+  padding: 0 px;
 }
+
 a {
-        color:rgb(0, 0, 0);
-        text-decoration: none;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
   font-family: 'Times New Roman', Times, serif;
-    }
-    ul{
-        list-style-type: none;
-        padding: 0;
-    }
-    
+}
 
-    #cabecalho {
-        background-color: beige;
-        border: rgb(0, 0, 0) solid 2px;
-        margin: 0px;
-        padding: 10px;
-    }
+ul {
+  list-style-type: none;
+  padding: 0;
+}
 
-  p {
+
+#cabecalho {
+  background-color: beige;
+  border: rgb(0, 0, 0) solid 2px;
+  margin: 0px;
+  padding: 10px;
+}
+
+p {
   font-size: 15px;
-font-family: fantasy;
-color: #000;
+  font-family: fantasy;
+  color: #000;
 
- 
+
 
 }
 
 #cabecalho {
-    text-align: center;
+  text-align: center;
 }
 
 #cabecalho li {
-    display: inline-block;
-    margin-right: 70px;
-    font-size: 20px;
-
-}
-        
-#titulo { 
-    width: 100%;
+  display: inline-block;
+  margin-right: 70px;
+  font-size: 20px;
 
 }
 
-    ul {
-       font-size: 20px;
-font-family: 'Times New Roman', Times, serif;
+#titulo {
+  width: 100%;
+
+}
+
+ul {
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
   color: rgb(0, 0, 0);
-    }
+}
 
-    a{ 
-        font-size: 15px;
-font-family: fantasy;
-  color: rgb(0, 0, 0); 
-    }
+a {
+  font-size: 15px;
+  font-family: fantasy;
+  color: rgb(0, 0, 0);
+}
 
 
-       h1 {
-    font-size: 200px;
-        text-align: center;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-       }
+h1 {
+  font-size: 200px;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
-       img {
+img {
   width: 500px;
- display: block;
+  display: block;
   margin: 50px auto;
 
 }
 
 .galeria {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* sempre 2 imagens por linha */
-  gap: 20px;                             /* espaço entre imagens */
-  justify-items: center;                  /* centraliza imagens na coluna */
+  grid-template-columns: repeat(2, 1fr);
+  /* sempre 2 imagens por linha */
+  gap: 20px;
+  /* espaço entre imagens */
+  justify-items: center;
+  /* centraliza imagens na coluna */
 }
 
 .cartaz {
-  width: 100%;       /* ocupa toda a largura da coluna */
-  max-width: 500px;  /* aumenta o tamanho máximo das imagens */
-  height: auto;      /* mantém proporção natural */
+  width: 100%;
+  /* ocupa toda a largura da coluna */
+  max-width: 500px;
+  /* aumenta o tamanho máximo das imagens */
+  height: auto;
+  /* mantém proporção natural */
 }
 
 .sobre {
