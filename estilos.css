@@ -100,3 +100,61 @@ img {
   line-height: 1.6;
   letter-spacing: 0.5px;
 }
+/* Contentor que coloca o título e o texto lado a lado */
+.seccao-sobre {
+    display: flex;
+    align-items: flex-start; /* Alinha ambos pelo topo */
+    gap: 40px;               /* Espaço entre o título e o texto */
+    padding: 60px;
+    margin-top: 50px;
+}
+
+/* Estilo do Título "Sobre Mim" */
+.titulo-sobre {
+    font-family: 'Impact', sans-serif;
+    font-size: clamp(60px, 10vw, 150px); /* Tamanho fluido que se adapta ao ecrã */
+    line-height: 0.85;
+    text-transform: uppercase;
+    margin: 0;
+    flex: 1;                 /* Ocupa a parte esquerda */
+}
+
+/* Estilo do Bloco de Texto */
+.bloco-texto {
+    flex: 1;                 /* Ocupa a parte direita (o "meio" da página) */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.sobre {
+    max-width: 500px;        /* Evita que as linhas fiquem demasiado compridas e difíceis de ler */
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;        /* Mantém o teu texto à esquerda dentro da coluna dele */
+}
+
+/* Ajuste para ecrãs pequenos (Telemóveis) */
+@media (max-width: 900px) {
+    .seccao-sobre {
+        flex-direction: column; /* No telemóvel, o texto passa para baixo do título */
+        padding: 20px;
+    }
+    
+    .titulo-sobre {
+        font-size: 80px;
+        margin-bottom: 20px;
+    }
+}
+
+.seccao-sobre {
+    display: flex;
+    align-items: center; /* Muda de flex-start para center */
+    gap: 60px; 
+    padding: 60px;
+}
+
+.sobre {
+    line-height: 1.8; /* Aumenta ligeiramente o espaço entre linhas */
+    letter-spacing: 0.5px; /* Dá um toque mais elegante */
+}
