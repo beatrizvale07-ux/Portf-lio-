@@ -158,3 +158,77 @@ img {
     line-height: 1.8; /* Aumenta ligeiramente o espaço entre linhas */
     letter-spacing: 0.5px; /* Dá um toque mais elegante */
 }
+
+/* Configuração do contentor principal */
+.container-sobre {
+    display: flex;
+    flex-direction: column; /* Elementos um por baixo do outro */
+    padding: 50px;
+    font-family: Arial, sans-serif; /* Ou a tua fonte padrão */
+}
+
+/* O título grande inspirado na imagem */
+.titulo-impacto {
+    font-family: 'Impact', sans-serif;
+    font-size: 120px; /* Tamanho bem grande */
+    line-height: 0.9;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: -2px;
+}
+
+/* Faz o texto começar a meio da página */
+.coluna-texto {
+    display: flex;
+    justify-content: flex-end; /* Empurra o conteúdo para a direita */
+}
+
+.sobre {
+    width: 50%; /* Ocupa apenas metade da largura */
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Ajuste para ecrãs de telemóvel */
+@media (max-width: 768px) {
+    .titulo-impacto { font-size: 60px; }
+    .sobre { width: 100%; } /* No telemóvel ocupa a largura toda */
+}
+
+.seccao-contactos {
+    display: flex;
+    flex-direction: column; /* Coloca os emails por baixo do título */
+    align-items: flex-start; 
+    padding: 100px 10%;
+    gap: 40px;
+}
+
+/* Título Impact mais contido e numa linha */
+.titulo-contacto {
+    font-family: 'Impact', sans-serif;
+    font-size: 80px; /* Reduzi o tamanho para caber numa linha */
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin: 0;
+    white-space: nowrap; /* Garante que não quebra a linha */
+}
+
+/* Estilo para os emails - Fonte Diferente e Simples */
+.email-simples {
+    font-family: 'Courier New', Courier, monospace; /* Fonte estilo "tecnico" e limpo */
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+    letter-spacing: 0px;
+    font-weight: normal;
+}
+
+/* Se preferires uma fonte de sistema muito limpa em vez de Courier, 
+   podes usar: font-family: 'Inter', sans-serif; */
+
+@media (max-width: 768px) {
+    .titulo-contacto {
+        font-size: 50px; /* Ajuste para ecrãs pequenos */
+    }
+}
