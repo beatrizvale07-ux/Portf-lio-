@@ -94,141 +94,86 @@ img {
   /* mantém proporção natural */
 }
 
-.sobre {
-  font-family: 'Arial', sans-serif;
-  font-size: 20px;
-  line-height: 1.6;
-  letter-spacing: 0.5px;
-}
-/* Contentor que coloca o título e o texto lado a lado */
+/* 1. O Contentor Principal - Ajustado para dar espaço ao texto */
 .seccao-sobre {
-    display: flex;
-    align-items: flex-start; /* Alinha ambos pelo topo */
-    gap: 40px;               /* Espaço entre o título e o texto */
-    padding: 60px;
-    margin-top: 50px;
+  display: flex;
+  align-items: flex-start;
+  /* Alinha o título e o texto pelo topo */
+  gap: 80px;
+  /* Espaço generoso entre título e texto */
+  padding: 80px 5%;
+  /* Menos margem lateral para o texto esticar */
+  margin-top: 50px;
 }
 
-/* Estilo do Título "Sobre Mim" */
+/* 2. O Título "Sobre Mim" */
 .titulo-sobre {
-    font-family: 'Impact', sans-serif;
-    font-size: clamp(60px, 10vw, 150px); /* Tamanho fluido que se adapta ao ecrã */
-    line-height: 0.85;
-    text-transform: uppercase;
-    margin: 0;
-    flex: 1;                 /* Ocupa a parte esquerda */
+  font-family: 'Impact', sans-serif;
+  font-size: clamp(80px, 10vw, 150px);
+  line-height: 0.85;
+  text-transform: uppercase;
+  margin: 0;
+  flex: 1;
+  /* Ocupa a parte esquerda proporcionalmente */
+  min-width: 300px;
+  /* Impede o título de ficar demasiado esmagado */
 }
 
-/* Estilo do Bloco de Texto */
+/* 3. O Bloco de Texto - AQUI é onde ganhas largura */
 .bloco-texto {
-    flex: 1;                 /* Ocupa a parte direita (o "meio" da página) */
-    display: flex;
-    justify-content: flex-start;
+  flex: 2;
+  /* O texto agora tem o DOBRO do espaço do título */
+  display: flex;
+  justify-content: flex-start;
 }
 
 .sobre {
-    max-width: 500px;        /* Evita que as linhas fiquem demasiado compridas e difíceis de ler */
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 0;
-    text-align: left;        /* Mantém o teu texto à esquerda dentro da coluna dele */
+  width: 100%;
+  /* Usa todo o espaço disponível no bloco-texto */
+  max-width: 900px;
+  /* Aumentamos de 500px para 900px para ser mais largo */
+  font-family: 'Arial', sans-serif;
+  font-size: 19px;
+  /* Texto ligeiramente maior para preencher melhor */
+  line-height: 1.8;
+  /* Mais espaço entre linhas para leitura leve */
+  text-align: left;
+  /* Alinhamento à esquerda para um look moderno */
+  margin: 0;
 }
 
-/* Ajuste para ecrãs pequenos (Telemóveis) */
-@media (max-width: 900px) {
-    .seccao-sobre {
-        flex-direction: column; /* No telemóvel, o texto passa para baixo do título */
-        padding: 20px;
-    }
-    
-    .titulo-sobre {
-        font-size: 80px;
-        margin-bottom: 20px;
-    }
-}
-
-.seccao-sobre {
-    display: flex;
-    align-items: center; /* Muda de flex-start para center */
-    gap: 60px; 
-    padding: 60px;
-}
-
-.sobre {
-    line-height: 1.8; /* Aumenta ligeiramente o espaço entre linhas */
-    letter-spacing: 0.5px; /* Dá um toque mais elegante */
-}
-
-/* Configuração do contentor principal */
-.container-sobre {
-    display: flex;
-    flex-direction: column; /* Elementos um por baixo do outro */
-    padding: 50px;
-    font-family: Arial, sans-serif; /* Ou a tua fonte padrão */
-}
-
-/* O título grande inspirado na imagem */
-.titulo-impacto {
-    font-family: 'Impact', sans-serif;
-    font-size: 120px; /* Tamanho bem grande */
-    line-height: 0.9;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-    letter-spacing: -2px;
-}
-
-/* Faz o texto começar a meio da página */
-.coluna-texto {
-    display: flex;
-    justify-content: flex-end; /* Empurra o conteúdo para a direita */
-}
-
-.sobre {
-    width: 50%; /* Ocupa apenas metade da largura */
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-/* Ajuste para ecrãs de telemóvel */
-@media (max-width: 768px) {
-    .titulo-impacto { font-size: 60px; }
-    .sobre { width: 100%; } /* No telemóvel ocupa a largura toda */
-}
-
+/* 4. Contactos (Mantém como tinhas, está bom!) */
 .seccao-contactos {
-    display: flex;
-    flex-direction: column; /* Coloca os emails por baixo do título */
-    align-items: flex-start; 
-    padding: 100px 10%;
-    gap: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 100px 10%;
+  gap: 40px;
 }
 
-/* Título Impact mais contido e numa linha */
 .titulo-contacto {
-    font-family: 'Impact', sans-serif;
-    font-size: 80px; /* Reduzi o tamanho para caber numa linha */
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    margin: 0;
-    white-space: nowrap; /* Garante que não quebra a linha */
+  font-family: 'Impact', sans-serif;
+  font-size: 80px;
+  text-transform: uppercase;
+  margin: 0;
 }
 
-/* Estilo para os emails - Fonte Diferente e Simples */
 .email-simples {
-    font-family: 'Courier New', Courier, monospace; /* Fonte estilo "tecnico" e limpo */
-    font-size: 20px;
-    color: #333;
-    margin: 10px 0;
-    letter-spacing: 0px;
-    font-weight: normal;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  color: #333;
 }
 
-/* Se preferires uma fonte de sistema muito limpa em vez de Courier, 
-   podes usar: font-family: 'Inter', sans-serif; */
+/* 5. Responsividade (Obrigatório para não estragar no telemóvel) */
+@media (max-width: 1024px) {
+  .seccao-sobre {
+    flex-direction: column;
+    /* No telemóvel/tablet, o texto vai para baixo */
+    gap: 30px;
+    padding: 40px;
+  }
 
-@media (max-width: 768px) {
-    .titulo-contacto {
-        font-size: 50px; /* Ajuste para ecrãs pequenos */
-    }
+  .titulo-sobre {
+    font-size: 80px;
+  }
 }
