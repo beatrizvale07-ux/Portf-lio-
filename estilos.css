@@ -177,3 +177,74 @@ img {
     font-size: 80px;
   }
 }
+
+.contentor-processos {
+    padding: 80px 10%; /* Espaço nas laterais */
+}
+
+/* Título igual ao "Sobre Mim" */
+.contentor-processos .titulo-impacto {
+    font-family: 'Impact', sans-serif;
+    font-size: 100px;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+}
+
+/* Layout lado a lado */
+.item-processo {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 150px; /* Espaço entre cada projeto */
+}
+
+/* Inverter para a foto aparecer à direita no segundo projeto */
+.item-processo.invertido {
+    flex-direction: row-reverse;
+}
+
+.imagem-processo {
+    flex: 1.5; /* A imagem ganha mais destaque */
+}
+
+.imagem-processo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Filtro para ficar P&B e só ganhar cor ao passar o rato */
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.imagem-processo img:hover {
+    filter: grayscale(0%);
+}
+
+.texto-processo {
+    flex: 1;
+}
+
+.texto-processo h2 {
+    font-family: 'Impact', sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.texto-processo p {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Ajuste para ecrãs pequenos */
+@media (max-width: 900px) {
+    .item-processo, .item-processo.invertido {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .contentor-processos .titulo-impacto {
+        font-size: 60px;
+    }
+}
