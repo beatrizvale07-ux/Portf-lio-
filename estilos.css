@@ -16,6 +16,7 @@ ul {
   padding: 0;
 }
 
+/* ORGANIZACAO DO CABECALHO */
 
 #cabecalho {
   background-color: beige;
@@ -28,9 +29,6 @@ p {
   font-size: 15px;
   font-family: fantasy;
   color: #000;
-
-
-
 }
 
 #cabecalho {
@@ -41,12 +39,10 @@ p {
   display: inline-block;
   margin-right: 70px;
   font-size: 20px;
-
 }
 
 #titulo {
   width: 100%;
-
 }
 
 ul {
@@ -72,41 +68,32 @@ img {
   width: 500px;
   display: block;
   margin: 50px auto;
-
 }
 
+/* DISPOSICAO DOS TRABALLHS */
 .galeria {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* sempre 2 imagens por linha */
   gap: 20px;
-  /* espaço entre imagens */
   justify-items: center;
-  /* centraliza imagens na coluna */
 }
 
 .cartaz {
   width: 100%;
-  /* ocupa toda a largura da coluna */
   max-width: 500px;
-  /* aumenta o tamanho máximo das imagens */
   height: auto;
-  /* mantém proporção natural */
 }
 
-/* 1. O Contentor Principal - Ajustado para dar espaço ao texto */
+
 .seccao-sobre {
   display: flex;
   align-items: flex-start;
-  /* Alinha o título e o texto pelo topo */
   gap: 80px;
-  /* Espaço generoso entre título e texto */
   padding: 80px 5%;
-  /* Menos margem lateral para o texto esticar */
   margin-top: 50px;
 }
 
-/* 2. O Título "Sobre Mim" */
+
 .titulo-sobre {
   font-family: 'Impact', sans-serif;
   font-size: clamp(80px, 10vw, 150px);
@@ -114,35 +101,28 @@ img {
   text-transform: uppercase;
   margin: 0;
   flex: 1;
-  /* Ocupa a parte esquerda proporcionalmente */
   min-width: 300px;
-  /* Impede o título de ficar demasiado esmagado */
 }
 
-/* 3. O Bloco de Texto - AQUI é onde ganhas largura */
+
 .bloco-texto {
   flex: 2;
-  /* O texto agora tem o DOBRO do espaço do título */
   display: flex;
   justify-content: flex-start;
 }
 
 .sobre {
   width: 100%;
-  /* Usa todo o espaço disponível no bloco-texto */
   max-width: 900px;
-  /* Aumentamos de 500px para 900px para ser mais largo */
   font-family: 'Arial', sans-serif;
   font-size: 19px;
-  /* Texto ligeiramente maior para preencher melhor */
   line-height: 1.8;
-  /* Mais espaço entre linhas para leitura leve */
   text-align: left;
-  /* Alinhamento à esquerda para um look moderno */
   margin: 0;
 }
 
-/* 4. Contactos (Mantém como tinhas, está bom!) */
+/* RELACIONADO COM A PAGINA CONTACTOS */
+
 .seccao-contactos {
   display: flex;
   flex-direction: column;
@@ -164,11 +144,11 @@ img {
   color: #333;
 }
 
-/* 5. Responsividade (Obrigatório para não estragar no telemóvel) */
+/* POSICAO DO TITULO SOBRE MIM */
+
 @media (max-width: 1024px) {
   .seccao-sobre {
     flex-direction: column;
-    /* No telemóvel/tablet, o texto vai para baixo */
     gap: 30px;
     padding: 40px;
   }
@@ -178,73 +158,115 @@ img {
   }
 }
 
+/* ORGANIZACAO DA PAGINA PROCESOS */
+
 .contentor-processos {
-    padding: 80px 10%; /* Espaço nas laterais */
+  padding: 80px 10%;
 }
 
-/* Título igual ao "Sobre Mim" */
 .contentor-processos .titulo-impacto {
-    font-family: 'Impact', sans-serif;
-    font-size: 100px;
-    text-transform: uppercase;
-    margin-bottom: 80px;
+  font-family: 'Impact', sans-serif;
+  font-size: 100px;
+  text-transform: uppercase;
+  margin-bottom: 80px;
 }
 
-/* Layout lado a lado */
 .item-processo {
-    display: flex;
-    align-items: center;
-    gap: 80px;
-    margin-bottom: 150px; /* Espaço entre cada projeto */
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 150px;
 }
 
-/* Inverter para a foto aparecer à direita no segundo projeto */
 .item-processo.invertido {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .imagem-processo {
-    flex: 1.5; /* A imagem ganha mais destaque */
+  flex: 1.5;
 }
 
 .imagem-processo img {
-    width: 100%;
-    height: auto;
-    display: block;
-    /* Filtro para ficar P&B e só ganhar cor ao passar o rato */
-    filter: grayscale(100%);
-    transition: filter 0.5s ease;
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
 }
 
 .imagem-processo img:hover {
-    filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 
 .texto-processo {
-    flex: 1;
+  flex: 1;
 }
 
 .texto-processo h2 {
-    font-family: 'Impact', sans-serif;
-    font-size: 32px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
+  font-family: 'Impact', sans-serif;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 .texto-processo p {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
 }
 
-/* Ajuste para ecrãs pequenos */
+
 @media (max-width: 900px) {
-    .item-processo, .item-processo.invertido {
-        flex-direction: column;
-        gap: 30px;
-    }
-    .contentor-processos .titulo-impacto {
-        font-size: 60px;
-    }
+
+  .item-processo,
+  .item-processo.invertido {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contentor-processos .titulo-impacto {
+    font-size: 60px;
+  }
+}
+
+/* TAMANHO E POSICAO DA PAGINA DO CV */
+
+.pagina-cv-clean {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  background-color: #f5f5dc;
+}
+
+.cv-grande {
+  width: 90%;
+  max-width: 1000px;
+  height: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+}
+
+/* CAIXA DO DOWLOAD */
+
+.download-container {
+  margin-bottom: 50px;
+}
+
+.btn-download {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #000;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+  background-color: #000;
+  color: #fff;
 }
