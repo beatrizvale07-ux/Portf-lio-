@@ -270,3 +270,32 @@ img {
   background-color: #000;
   color: #fff;
 }
+
+
+/* PARTE DO TEXTO DOS DESIGNERS*/
+
+
+.item-processo {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.imagem-processo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.imagem-processo img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  display: block;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.texto-processo {
+  flex: 1;
+}
