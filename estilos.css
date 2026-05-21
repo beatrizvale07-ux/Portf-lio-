@@ -1,5 +1,5 @@
 body {
-  font-family: cursive;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: beige;
   margin: 0 px;
   padding: 0 px;
@@ -27,7 +27,7 @@ ul {
 
 p {
   font-size: 15px;
-  font-family: fantasy;
+  font-family: Arial, Helvetica, sans-serif;
   color: #000;
 }
 
@@ -53,7 +53,8 @@ ul {
 
 a {
   font-size: 15px;
-  font-family: fantasy;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   color: rgb(0, 0, 0);
 }
 
@@ -299,3 +300,40 @@ img {
 .texto-processo {
   flex: 1;
 }
+
+#cabecalho a {
+  position: relative;
+  text-decoration: none;
+}
+
+#cabecalho a::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 0%;
+  height: 2px;
+
+  background-color: black;
+
+  transition: width 0.3s ease;
+}
+
+#cabecalho a:hover::after {
+  width: 100%;
+}
+
+.cartaz {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+
+  transition: transform 0.4s ease;
+}
+
+.cartaz:hover {
+  transform: scale(1.05);
+}
+
