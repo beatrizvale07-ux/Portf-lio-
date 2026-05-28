@@ -1,28 +1,9 @@
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: beige;
-  margin: 0 px;
-  padding: 0 px;
-}
-
-a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-ul {
-  list-style-type: none;
+  margin: 0;
   padding: 0;
-}
-
-/* ORGANIZACAO DO CABECALHO */
-
-#cabecalho {
-  background-color: beige;
-  border: rgb(0, 0, 0) solid 2px;
-  margin: 0px;
-  padding: 10px;
 }
 
 p {
@@ -31,33 +12,21 @@ p {
   color: #000;
 }
 
-#cabecalho {
-  text-align: center;
-}
-
-#cabecalho li {
-  display: inline-block;
-  margin-right: 70px;
-  font-size: 20px;
-}
-
-#titulo {
-  width: 100%;
+a {
+  color: #000;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 ul {
+  list-style-type: none;
+  padding: 0;
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
-  color: rgb(0, 0, 0);
+  color: #000;
 }
-
-a {
-  font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  color: rgb(0, 0, 0);
-}
-
 
 h1 {
   font-size: 200px;
@@ -71,7 +40,44 @@ img {
   margin: 50px auto;
 }
 
-/* DISPOSICAO DOS TRABALLHS */
+
+#cabecalho {
+  background-color: beige;
+  border: 2px solid #000;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+#cabecalho li {
+  display: inline-block;
+  margin-right: 70px;
+  font-size: 20px;
+}
+
+#cabecalho a {
+  position: relative;
+}
+
+#cabecalho a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+#cabecalho a:hover::after {
+  width: 100%;
+}
+
+#titulo {
+  width: 100%;
+}
+
 .galeria {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -83,6 +89,11 @@ img {
   width: 100%;
   max-width: 500px;
   height: auto;
+  transition: transform 0.4s ease;
+}
+
+.cartaz:hover {
+  transform: scale(1.05);
 }
 
 
@@ -94,9 +105,8 @@ img {
   margin-top: 50px;
 }
 
-
 .titulo-sobre {
-  font-family: 'Impact', sans-serif;
+  font-family: Impact, sans-serif;
   font-size: clamp(80px, 10vw, 150px);
   line-height: 0.85;
   text-transform: uppercase;
@@ -104,7 +114,6 @@ img {
   flex: 1;
   min-width: 300px;
 }
-
 
 .bloco-texto {
   flex: 2;
@@ -115,14 +124,13 @@ img {
 .sobre {
   width: 100%;
   max-width: 900px;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 19px;
   line-height: 1.8;
   text-align: left;
   margin: 0;
 }
 
-/* RELACIONADO COM A PAGINA CONTACTOS */
 
 .seccao-contactos {
   display: flex;
@@ -133,7 +141,7 @@ img {
 }
 
 .titulo-contacto {
-  font-family: 'Impact', sans-serif;
+  font-family: Impact, sans-serif;
   font-size: 80px;
   text-transform: uppercase;
   margin: 0;
@@ -145,28 +153,13 @@ img {
   color: #333;
 }
 
-/* POSICAO DO TITULO SOBRE MIM */
-
-@media (max-width: 1024px) {
-  .seccao-sobre {
-    flex-direction: column;
-    gap: 30px;
-    padding: 40px;
-  }
-
-  .titulo-sobre {
-    font-size: 80px;
-  }
-}
-
-/* ORGANIZACAO DA PAGINA PROCESOS */
 
 .contentor-processos {
   padding: 80px 10%;
 }
 
 .contentor-processos .titulo-impacto {
-  font-family: 'Impact', sans-serif;
+  font-family: Impact, sans-serif;
   font-size: 100px;
   text-transform: uppercase;
   margin-bottom: 80px;
@@ -184,11 +177,14 @@ img {
 }
 
 .imagem-processo {
-  flex: 1.5;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .imagem-processo img {
   width: 100%;
+  max-width: 350px;
   height: auto;
   display: block;
   filter: grayscale(100%);
@@ -204,34 +200,18 @@ img {
 }
 
 .texto-processo h2 {
-  font-family: 'Impact', sans-serif;
+  font-family: Impact, sans-serif;
   font-size: 32px;
   text-transform: uppercase;
   margin-bottom: 15px;
 }
 
 .texto-processo p {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 18px;
   line-height: 1.6;
   color: #333;
 }
-
-
-@media (max-width: 900px) {
-
-  .item-processo,
-  .item-processo.invertido {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .contentor-processos .titulo-impacto {
-    font-size: 60px;
-  }
-}
-
-/* TAMANHO E POSICAO DA PAGINA DO CV */
 
 .pagina-cv-clean {
   display: flex;
@@ -249,14 +229,13 @@ img {
   margin-bottom: 30px;
 }
 
-/* CAIXA DO DOWLOAD */
 
 .download-container {
   margin-bottom: 50px;
 }
 
 .btn-download {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -273,67 +252,41 @@ img {
 }
 
 
-/* PARTE DO TEXTO DOS DESIGNERS*/
+@media (max-width: 1024px) {
 
+  .seccao-sobre {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px;
+  }
 
-.item-processo {
-  display: flex;
-  align-items: center;
-  gap: 80px;
+  .titulo-sobre {
+    font-size: 80px;
+  }
 }
 
-.imagem-processo {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+@media (max-width: 900px) {
+
+  .item-processo,
+  .item-processo.invertido {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contentor-processos .titulo-impacto {
+    font-size: 60px;
+  }
+
+  h1 {
+    font-size: 100px;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  #cabecalho li {
+    display: block;
+    margin: 15px 0;
+  }
 }
-
-.imagem-processo img {
-  width: 100%;
-  max-width: 350px;
-  height: auto;
-  display: block;
-  filter: grayscale(100%);
-  transition: filter 0.5s ease;
-}
-
-.texto-processo {
-  flex: 1;
-}
-
-#cabecalho a {
-  position: relative;
-  text-decoration: none;
-}
-
-#cabecalho a::after {
-  content: "";
-  position: absolute;
-
-  left: 0;
-  bottom: -5px;
-
-  width: 0%;
-  height: 2px;
-
-  background-color: black;
-
-  transition: width 0.3s ease;
-}
-
-#cabecalho a:hover::after {
-  width: 100%;
-}
-
-.cartaz {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-
-  transition: transform 0.4s ease;
-}
-
-.cartaz:hover {
-  transform: scale(1.05);
-}
-
